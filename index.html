@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Latest Keyboard Project</title>
+    <style>
+      body {
+        background-color: black;
+      }
+
+      .keyboard-project {
+        width: 40%;
+        margin: 32px auto;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        background: linear-gradient(
+          to top,
+          rgba(13 201 140 / 48%),
+          rgba(13 201 140 / 98%)
+        );
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.3px);
+        border: 1px solid rgba(255, 255, 255, 0.53);
+      }
+
+      h1,
+      h2,
+      p,
+      button {
+        display: block;
+        margin: 16px auto;
+        width: 80%;
+        line-height: 1.8;
+      }
+
+      h1,
+      h2,
+      button {
+        text-align: center;
+      }
+
+      h1 {
+        border: 2px solid rgba(255, 255, 255, 0.75);
+        border-radius: 10px;
+        padding: 20px;
+        background: linear-gradient(
+          to left top,
+          rgba(13 201 225 / 46%),
+          rgba(13 201 140 / 98%)
+        );
+        text-shadow: 0px 6px 4px rgba(255 255 255 / 0.75);
+      }
+
+      h2 {
+        color: antiquewhite;
+      }
+
+      p {
+        text-align: justify;
+        color: antiquewhite;
+      }
+
+      img {
+        display: block;
+        margin: 16px auto;
+        width: fit-content;
+        max-width: 80%;
+        border-radius: 10px;
+      }
+
+      button {
+        width: 200px;
+        padding: 20px 0;
+        border: 1px solid antiquewhite;
+        border-radius: 30px;
+        color: antiquewhite;
+        font-size: large;
+        font-weight: 600;
+        background-color: rgb(39 161 150);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        color: rgb(39 161 150);
+        background-color: azure;
+      }
+
+      span {
+        visibility: hidden;
+      }
+
+      p:hover span {
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="keyboard-project">
+      <h1>MY LATEST KEYBOARD PROJECT</h1>
+      <hr />
+      <h2>I've bought the Kumara Reddragon k552-2 a while ago...</h2>
+      <p>
+        It's a decent keyboard (great for it's price), with a solid build and
+        hot-swappable switches, but easily starts to presents problems.
+        <strong>
+          I've yet to determine if those problems are related to switches or
+          keycaps.
+        </strong>
+        Weirdly enough, if I'd blow air into the keycap and switch separately
+        (meaning, having removed the keycap from it's place), it would work
+        again.
+        <br />
+        <br />
+        That would suggest a problem with dirt, right? Not necessarily. If you
+        consider that I just removed the keycap and placed it again, I could
+        just be fitting it in better. So... <em>I don't know</em>.
+      </p>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/727/original/kumara-redragon-red.jpg?1677799541"
+        alt="Image of a Kumara Redragon keyboard with red backlighting"
+        title="Isn't it a beauty?"
+      />
+      <hr />
+      <p>
+        BUT as i recently found out,
+        <a href="https://www.akkogear.com.br" title="Akko Gear - So Good!">
+          Akko switches and keycaps fit perfectly in the kumara!</a
+        >
+        So I needed to have them! I bought a set of white on black SAL profile
+        Double-Shot ABS keycaps and 2 sets of Akko CS Starfish switches, that
+        are linear and need 50g actuation force.
+        <em><strong> Absolutely fantastic products!</strong></em>
+        <br /><br />
+        No they aren't paying me to say this... <span>I WISH!</span>
+      </p>
+      <hr />
+      <p class="hype-text">Do you wanna see how it looks after modding?</p>
+      <button>CLICK HERE</button>
+    </div>
+    <script>
+      // let, if, else, alert, prompt, event
+      function showResult() {
+        let targetImg = document.querySelector("img");
+        let targetText = document.querySelector(".hype-text");
+
+        targetImg.src =
+          "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/070/019/original/modifiedkumara.jpeg?1677958132";
+        targetImg.alt = "Image of a modified Kumara Reddragon keyboard";
+        targetText.innerHTML =
+          "Check it out above where the base keyboard was!";
+      }
+
+      let showButton = document.querySelector("button");
+      showButton.addEventListener("click", showResult);
+
+      let keyboardLike = prompt("Hey, do you like keyboards? (yes/no)");
+      keyboardLike = keyboardLike.toLowerCase().trim();
+
+      if (keyboardLike === "no") {
+        alert("What are you doing here, then? Go back to Google!");
+        window.open("https://www.google.com", "_self");
+      } else if (keyboardLike === "") {
+        alert("How rude! But let's go, anyway!");
+      } else {
+        alert("Let's go!");
+      }
+    </script>
+  </body>
+</html>
